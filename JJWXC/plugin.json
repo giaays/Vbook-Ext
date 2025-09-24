@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "name": "Jjwxc [Tấn Giang] edited by G💰✅",
+    "author": "Moleys",
+    "version": 33,
+    "source": "http://www.jjwxc.net",
+    "regexp": "(www.|my.|m.)?jjwxc.net/(onebook|book2)(.*?)",
+    "description": "Đọc truyện trên trang http://www.jjwxc.net - Đọc chương VIP bằng cách nhập token trong Mã bổ sung",
+    "locale": "zh_CN",
+    "language": "javascript",
+    "type": "chinese_novel"
+  },
+  "script": {
+    "home": "home.js",
+    "detail": "detail.js",
+    "toc": "toc.js",
+    "genre": "genre.js",
+    "search": "search.js",
+    "chap": "chap.js"
+  }
+}
