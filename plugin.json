@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "author": "G",
+    "description": "Edited by G"
+  },
+  "data": [
+    {
+      "name": "Jjwxc [Tấn Giang] edited by G💰✅",
+      "author": "G",
+      "path": "https://raw.githubusercontent.com/giaays/Vbook-Ext/main/JJWXC/plugin.zip",
+      "version": 33,
+      "source": "https://www.jjwxc.net/",
+      "icon": "https://raw.githubusercontent.com/giaays/Vbook-Ext/main/JJWXC/icon.png",
+      "description": "Đọc truyện trên trang http://www.jjwxc.net",
+      "type": "chinese_novel",
+      "locale": "zh_CN"
+    }
