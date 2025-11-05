@@ -21,9 +21,8 @@ function execute(url) {
     var author = doc.authorName || "";
     var tags = doc.novelTags || "";
     var coverImg = "https://images.weserv.nl/?url=" + doc.novelCover + "&output=jpg&w=300";
-
     var category = doc.novelClass || "";
-    var status = doc.novelStep == "2" ? "已完结" : "连载中";
+    var status = (doc.novelStep == "2") ? "已完结" : "连载中";
     var view = doc.mainview || "";
     var wordCount = doc.novelSizeformat || doc.novelSize || "";
     var protagonist = doc.protagonist || "";
@@ -39,31 +38,26 @@ function execute(url) {
             if (chapJson && chapJson.chapterlist && chapJson.chapterlist.length > 0) {
                 var lastChap = chapJson.chapterlist[chapJson.chapterlist.length - 1];
                 var vip = (lastChap.isvip !== "0") ? "🔒" : "";
-                last = vip + lastChap.chapterid + "." + lastChap.chaptername + "•" + lastChap.chapterdate;
+                last = vip + lastChap.chapterid + "." + lastChap.chaptername + " • " + lastChap.chapterdate;
             }
         }
     } catch (e) {
         last = "暂无目录";
     }
 
-    var intro = doc.novelIntro || "";
-    intro = intro
+    var intro = (doc.novelIntro || "")
         .replace(/&lt;/g, "<")
         .replace(/&gt;/g, ">")
         .replace(/<br\/><br\/>/g, "<br/>")
         .replace(/<br\/>/g, "<br>");
 
-    var detail =
-        "状态：" + status + "<br>" +
-        "类型：" + category + "<br>" +
-        "视角：" + view + "<br>" +
-        "字数：" + wordCount + "<br>" +
-        "最新章节：" + last + "<br>" +
-        "作者：" + author + "<br>" +
+    var detail ="类型: " + category + "<br>" +
+        "标签: " + tags + "<br>" +
+        "字数: " + wordCount + "<br>" +
+        "最新章节: " + last + "<br>" +
         protagonist + "<br>" +
         costar + "<br>" +
-        others + "<br>" +
-        "标签：" + tags;
+        others;
 
     return Response.success({
         name: name,
@@ -71,6 +65,7 @@ function execute(url) {
         author: author,
         description: (shortIntro ? shortIntro + "<br><br>" : "") + intro,
         detail: detail,
+		ongoing: status !== "已完结",
         host: "http://www.jjwxc.net/"
     });
 }
