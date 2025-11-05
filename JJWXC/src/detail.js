@@ -22,7 +22,6 @@ function execute(url) {
     var tags = doc.novelTags || "";
     var coverImg = "https://images.weserv.nl/?url=" + doc.novelCover + "&output=jpg&w=300";
 
-    // các trường bổ sung
     var category = doc.novelClass || "";
     var status = doc.novelStep == "2" ? "已完结" : "连载中";
     var view = doc.mainview || "";
@@ -32,7 +31,6 @@ function execute(url) {
     var others = doc.other || "";
     var shortIntro = doc.novelIntroShort || "";
 
-    // 🟢 gọi API đúng để lấy chương mới nhất (android.jjwxc.net)
     var last = "";
     try {
         var chapRes = fetch("https://android.jjwxc.net/androidapi/chapterList?novelId=" + bookID + "&more=0&whole=1");
@@ -48,7 +46,6 @@ function execute(url) {
         last = "暂无目录";
     }
 
-    // mô tả chi tiết
     var intro = doc.novelIntro || "";
     intro = intro
         .replace(/&lt;/g, "<")
