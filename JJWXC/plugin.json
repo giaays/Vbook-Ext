@@ -2,7 +2,7 @@
   "metadata": {
     "name": "Jjwxc [Tấn Giang] - G",
     "author": "Moleys",
-    "version": 39,
+    "version": 40,
     "source": "http://www.jjwxc.net",
     "regexp": "(www.|my.|m.)?jjwxc.net/(onebook|book2)(.*?)",
     "description": "Đọc truyện trên trang http://www.jjwxc.net - Đọc chương VIP bằng cách nhập token trong Mã bổ sung",
