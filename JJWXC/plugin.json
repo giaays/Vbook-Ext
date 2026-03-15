@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "name": "Jjwxc-repo duongden💰✅",
+    "name": "Jjwxc [Tấn Giang] edited by G💰✅",
     "author": "Moleys",
-    "version": 46,
+    "version": 49,
     "source": "http://www.jjwxc.net",
     "regexp": "(www.|my.|m.)?jjwxc.net/(onebook|book2)(.*?)",
     "description": "Đọc truyện trên trang http://www.jjwxc.net - Đọc chương VIP bằng cách nhập token trong Mã bổ sung",
@@ -18,7 +18,7 @@
     "search": "search.js",
     "chap": "chap.js"
   },
-"config": {
+  "config": {
   "JJWXC_TOKEN": {
     "title": "JJWXC Token",
     "mode": "input",
